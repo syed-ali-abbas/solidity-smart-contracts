@@ -20,9 +20,9 @@ User calls setter function and supplies the two integer numbers. The Setter func
 
 Enums are used for creating user defined data types. 
 
-enum <enumerator_name> { 
-            element 1, element 2,....,element n
-} 
+enum <enumerator_name> { <br />
+            element 1, element 2,....,element n<br />
+} <br /><br />
 
 First we the contract will check the state, which is on waiting mode by default because we assigned state.awaiting in the constructor. so the isactive method will return false boolean value initially and state will return 0.
 After that we activate it using Activate function. Which overwrites the value of state by state.Activate.
@@ -37,23 +37,23 @@ The main focus of this contract is resolving the below issue:
 function inc() public CheckPausedState {<br />
         require(paused==false,"Pause must be FALSE");  //redundant <br />
         count+=1;<br />
-    }
+    }<br /><br />
     function dec() public CheckPausedState{<br />
         require(paused==false,"Pause must be FALSE"); //redundant <br />
         count-=1;<br />
-    }
+    }<br /><br />
     
 The solution to this problem is creating a Modifier function and place this statement labelled as redundant in that specific function. As shown below:
  
- modifier CheckPausedState(){
-        require(paused==false,"Pause must be FALSE");
-        _; //it is placded to execute the remaining statement of code
-    }
-    function inc() public CheckPausedState {
-        count+=1;
-    }
-    function dec() public CheckPausedState{
-        count-=1;
-    }
+ modifier CheckPausedState(){<br />
+        require(paused==false,"Pause must be FALSE");<br />
+        _; //it is placded to execute the remaining statement of code<br />
+    }<br /><br />
+    function inc() public CheckPausedState {<br />
+        count+=1;<br />
+    }<br /><br />
+    function dec() public CheckPausedState{<br />
+        count-=1;<br />
+    }<br /><br />
     
  Note: The Modifier functions also accept parameters like Modifier func(param1){}
