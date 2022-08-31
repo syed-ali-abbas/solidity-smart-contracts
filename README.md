@@ -34,13 +34,13 @@ The contract focuses on Function named as Modifier. The modifier function is use
 
 The main focus of this contract is resolving the below issue:
 
-function inc() public CheckPausedState {
-        require(paused==false,"Pause must be FALSE");  //redundant
-        count+=1;
+function inc() public CheckPausedState {<br />
+        require(paused==false,"Pause must be FALSE");  //redundant <br />
+        count+=1;<br />
     }
-    function dec() public CheckPausedState{
-        require(paused==false,"Pause must be FALSE"); //redundant
-        count-=1;
+    function dec() public CheckPausedState{<br />
+        require(paused==false,"Pause must be FALSE"); //redundant <br />
+        count-=1;<br />
     }
     
 The solution to this problem is creating a Modifier function and place this statement labelled as redundant in that specific function. As shown below:
