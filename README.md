@@ -27,3 +27,33 @@ enum <enumerator_name> {
 First we the contract will check the state, which is on waiting mode by default because we assigned state.awaiting in the constructor. so the isactive method will return false boolean value initially and state will return 0.
 After that we activate it using Activate function. Which overwrites the value of state by state.Activate.
 In the end we again check the state and it returns 1. After rechecking isactivate function we will get true in response. 
+
+### Contract 2
+
+The contract focuses on Function named as Modifier. The modifier function is used to decrease the redundancy of the code. We have ChangePausedState which is mapped with a boolean datatype. By default Boolean values are set to False. So i have used this function to change the values i.e. true or false.
+
+The main focus of this contract is resolving the below issue:
+
+function inc() public CheckPausedState {
+        require(paused==false,"Pause must be FALSE");  //redundant
+        count+=1;
+    }
+    function dec() public CheckPausedState{
+        require(paused==false,"Pause must be FALSE"); //redundant
+        count-=1;
+    }
+    
+The solution to this problem is creating a Modifier function and place this statement labelled as redundant in that specific function. As shown below:
+ 
+ modifier CheckPausedState(){
+        require(paused==false,"Pause must be FALSE");
+        _; //it is placded to execute the remaining statement of code
+    }
+    function inc() public CheckPausedState {
+        count+=1;
+    }
+    function dec() public CheckPausedState{
+        count-=1;
+    }
+    
+ Note: The Modifier functions also accept parameters like Modifier func(param1){}
