@@ -63,3 +63,11 @@ The solution to this problem is creating a Modifier function and place this stat
  Constructors in solidity are used to deploy the contract and initialize the state variables. Constructors can be parameterized.
  In this contract the the address of contract deployer is assigned to "deployerAddress" i.e. deployerAddress=msg.sender. 
  To see how the constructor takes parameter input the we have used the variable x_ and assigned it a value of x via user input within constructor.
+ 
+  ### Contract 5
+  
+  Ownable Contract is basically teaching the concept of How to create the functions that only Owner's can call and and How to restrict the other's from calling the function. Follow the below steps:
+  1. In the first step we passed the message.sender value in the state variable initiated globally.
+  2. Create a modifier function in which mention the condition which check's if the user is owner or not.
+  3. In the second function "setOwner" we are basically changing the ownership.
+  4. Last two functions i.e. "OnlyOwnerCanCall" and "AnyOneCanCall" are just for testing purposes. If our code is running successfully or not.
