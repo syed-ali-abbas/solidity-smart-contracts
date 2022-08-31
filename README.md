@@ -57,3 +57,9 @@ The solution to this problem is creating a Modifier function and place this stat
     }<br /><br />
     
  Note: The Modifier functions also accept parameters like Modifier func(param1){}
+ 
+ ### Contract 4
+ 
+ Constructors in solidity are used to deploy the contract and initialize the state variables. Constructors can be parameterized.
+ In this contract the the address of contract deployer is assigned to "deployerAddress" i.e. deployerAddress=msg.sender. 
+ To see how the constructor takes parameter input the we have used the variable x_ and assigned it a value of x via user input within constructor.
