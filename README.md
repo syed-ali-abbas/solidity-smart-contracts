@@ -35,11 +35,11 @@ The contract focuses on Function named as Modifier. The modifier function is use
 The main focus of this contract is resolving the below issue:
 
 function inc() public CheckPausedState {<br />
-        require(paused==false,"Pause must be FALSE");  //redundant <br />
+        require(paused==false,"Pause must be FALSE");  // redundant <br />
         count+=1;<br />
     }<br /><br />
     function dec() public CheckPausedState{<br />
-        require(paused==false,"Pause must be FALSE"); //redundant <br />
+        require(paused==false,"Pause must be FALSE"); // redundant <br />
         count-=1;<br />
     }<br /><br />
     
@@ -47,7 +47,7 @@ The solution to this problem is creating a Modifier function and place this stat
  
  modifier CheckPausedState(){<br />
         require(paused==false,"Pause must be FALSE");<br />
-        _; //it is placded to execute the remaining statement of code<br />
+        _; // it is placed to execute the remaining statement of code<br />
     }<br /><br />
     function inc() public CheckPausedState {<br />
         count+=1;<br />
