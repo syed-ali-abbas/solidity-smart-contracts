@@ -28,7 +28,7 @@ First we the contract will check the state, which is on waiting mode by default 
 After that we activate it using Activate function. Which overwrites the value of state by state.Activate.
 In the end we again check the state and it returns 1. After rechecking isactivate function we will get true in response. 
 
-### Contract 2
+### Contract 3
 
 The contract focuses on Function named as Modifier. The modifier function is used to decrease the redundancy of the code. We have ChangePausedState which is mapped with a boolean datatype. By default Boolean values are set to False. So i have used this function to change the values i.e. true or false.
 
