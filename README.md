@@ -71,3 +71,11 @@ The solution to this problem is creating a Modifier function and place this stat
   2. Create a modifier function in which mention the condition which check's if the user is owner or not.
   3. In the second function "setOwner" we are basically changing the ownership.
   4. Last two functions i.e. "OnlyOwnerCanCall" and "AnyOneCanCall" are just for testing purposes. If our code is running successfully or not.
+  
+   ### Contract 6
+   
+   In this contract the output of a function is focused. 
+   In the First Function we can simply see that the function returns two outputs i.e. an integer and a boolean value.
+   In the second function we have named the both parameters i.e. uint x and bool b.
+   In the third function we have assigned the both values in function body instead of returning them.
+   
