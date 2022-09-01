@@ -109,7 +109,7 @@ The solution to this problem is creating a Modifier function and place this stat
 
 Mapping is used to create key value pairs. We can also create nested mapping's. We can assign the values to the mapping variable. like shown below:
 
-isFriend[msg.sender][0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2]=true;
+isFriend[msg.sender][0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2]=true;</br></br>
 According to the above solidity statement: the person who calls the function and the address passed both are set to true means "Both are friends". To make it simple we simply define the balance of msg.sender using mapping as shown below:
  
  //functionCallerBalance = 3333;</br>
