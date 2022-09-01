@@ -79,3 +79,27 @@ The solution to this problem is creating a Modifier function and place this stat
    In the second function we have named the both parameters i.e. uint x and bool b.
    In the third function we have assigned the both values in function body instead of returning them.
    
+ ### Contract 7
+ 
+ There are two types of arrays in solidity the Dynamic Arrays and Static Array's.
+ The Arrays have functions like get, update, delete, pop and push. 
+ The memory keyword can be used with array in a function. It holds the functions argument data and removes after execution completes.
+ Removing array elements is interesting scope when working on solidity array's
+ If you use Delete keyword for removing the array elements. It will place the default type value after removing the specified value. It is not an effecient way as it consumes alot of gas. To make it effecient we can do is manually delete the elements. For this we have a Shift left algorithm which works as follows:
+ 
+ Array = [ 1 ,2 ,3 ,4 ,5 ,6]</br>
+ 
+ Remove(2); //Remove value at index 2</br>
+ 
+ After removing we have results: [1, 2, 4, 5, 6, 6]</br>
+ 
+ Now the value is removed but last elements are duplicated. To remove the redundency we will call POP(); function.
+ The above algorithm will maintain the order of array elements.
+ 
+ 
+ Another More Efficient way for Removing element's from array is to just replace the last element by the element to be removed. It is most effecient way but it disturbs the order of array elements.
+ 
+  arr[index_]=arr[arr.length-1];</br>
+  arr.pop();
+ 
+ 
