@@ -107,6 +107,10 @@ The solution to this problem is creating a Modifier function and place this stat
  
 ### Contract 8
 
+Mappings act as hash tables which consist of key types and corresponding value type pairs. They are defined like any other variable type in Solidity:
+
+mapping(_KeyType => _ValueType) public mappingName
+
 Mapping is used to create key value pairs. We can also create nested mapping's. We can assign the values to the mapping variable. like shown below:
 
 isFriend[msg.sender][0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2]=true;</br></br>
