@@ -119,3 +119,7 @@ According to the above solidity statement: the person who calls the function and
  //functionCallerBalance = 3333;</br>
  balances[msg.sender]=3333;
 
+## Contract 9
+
+Indexed keyword is used to search or filter the informtion logged on the blockchain storage.
+Event keyword is used to log the data on the blockchain. In the example of contract we have created the contract no 9 as event and emitted it in the sendmessage function. Since the information will be stored on the blockchain it is called as "Transaction" so we are not going to use view or pure keywords. Because these words used for read only functions. 
