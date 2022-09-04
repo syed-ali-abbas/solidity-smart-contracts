@@ -141,7 +141,11 @@ When using multiple inheritance, the order of inheritance must be from base like
 
 ### Visibility
 
-public - accessible everywhere
-private - accessible within contract only
-internal - accessible within contract and child contracts
-external - only from outside contract. You can use this.funName to call external functions within the contract itself but it takes gas.
+public - accessible everywhere</br>
+private - accessible within contract only</br>
+internal - accessible within contract and child contracts</br>
+external - only from outside contract. You can use this.funName to call external functions within the contract itself but it takes gas.</br>
+
+### Immutable Variables
+
+These variables are initialized only once and its value cannot be changed. They are like constant's. Example of Immutable variables can be contract owner address.
