@@ -149,3 +149,13 @@ external - only from outside contract. You can use this.funName to call external
 ### Immutable Variables
 
 These variables are initialized only once and its value cannot be changed. They are like constant's. Example of Immutable variables can be contract owner address.
+
+### Payable
+
+Payable keyword is attached to send and recieve ethers.
+
+### Fallback():
+
+Fallback function is used to send and recieve ethers. It has a keyword payable along the signature. If you will not create a reciever function, fallback function will be executed. </br>
+You can also create a Reciver function as payable to send or recieve ethers. </br>
+The main difference between fallback and reciever function is that if you implemented both functions and user makes a transaction, if the transaction contains msg.value the fallback function will be executed on the other hand if the msg.value is empty, the receiver function will be executed. But if there is no reciever function implemented then the fallback function will be executed.
