@@ -137,3 +137,11 @@ contract B is A{
 }
 
 When using multiple inheritance, the order of inheritance must be from base like to derived. Otherwise the IDE will give error while compiling the contract.
+
+
+### Visibility
+
+public - accessible everywhere
+private - accessible within contract only
+internal - accessible within contract and child contracts
+external - only from outside contract. You can use this.funName to call external functions within the contract itself but it takes gas.
