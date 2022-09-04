@@ -159,3 +159,10 @@ Payable keyword is attached to send and recieve ethers.
 Fallback function is used to send and recieve ethers. It has a keyword payable along the signature. If you will not create a reciever function, fallback function will be executed. </br>
 You can also create a Reciver function as payable to send or recieve ethers. </br>
 The main difference between fallback and reciever function is that if you implemented both functions and user makes a transaction, if the transaction contains msg.value the fallback function will be executed on the other hand if the msg.value is empty, the receiver function will be executed. But if there is no reciever function implemented then the fallback function will be executed.
+
+### Send Ether
+
+There are three ways to send ethers:
+1. Transfer - 2300 gas and reverts when execution fails.
+2. Send - 2300 gas and returns boolean value i.e. true on success and false on transaction failure.
+3. Call - All gas, returns bool and data
