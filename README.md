@@ -166,3 +166,8 @@ There are three ways to send ethers:
 1. Transfer - 2300 gas and reverts when execution fails.
 2. Send - 2300 gas and returns boolean value i.e. true on success and false on transaction failure.
 3. Call - All gas, returns bool and data
+
+##$ Interface
+
+In solidity interfaces are implemented same but the way they are called is different.</br>
+The InterfaceCaller contract actually calls the Interface and wrap's the address of the completely implemented contract. So keeping the same interface and changing the actual contract address will make it clear about how to use the concept of interface specifically in interface
