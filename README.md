@@ -167,7 +167,14 @@ There are three ways to send ethers:
 2. Send - 2300 gas and returns boolean value i.e. true on success and false on transaction failure.
 3. Call - All gas, returns bool and data
 
-##$ Interface
+### Interface
 
 In solidity interfaces are implemented same but the way they are called is different.</br>
-The InterfaceCaller contract actually calls the Interface and wrap's the address of the completely implemented contract. So keeping the same interface and changing the actual contract address will make it clear about how to use the concept of interface specifically in interface
+The InterfaceCaller contract actually calls the Interface and wrap's the address of the completely implemented contract. So keeping the same interface and changing the actual contract address will make it clear about how to use the concept of interface specifically in interface. For Example:</br>
+
+Consider three contract's named as ICounter, Counter and CallerCounter. 
+1. The ICounter interface contains the function signture's without its implementations.
+2. Counter contract contains the complete implementation of functions declared in the ICounter interface.
+3. The CallerCounter contains a method which calls the ICounter interface and passes the address of Counter Contract.
+
+Write the code of Counter contract in a seperate file to understand it's usecase. There may be any Contract in it's place having thousands of number of lines with differenct functions. So to make it easy to call and use these functions we will simply set the address of that contract in the Interface. 
