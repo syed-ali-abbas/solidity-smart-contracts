@@ -178,3 +178,10 @@ Consider three contract's named as ICounter, Counter and CallerCounter.
 3. The CallerCounter contains a method which calls the ICounter interface and passes the address of Counter Contract.
 
 Write the code of Counter contract in a seperate file to understand it's usecase. There may be any Contract in it's place having thousands of number of lines with differenct functions. So to make it easy to call and use these functions we will simply set the address of that contract in the Interface. 
+
+### DelegateCall
+
+Delegatecall is a low level function similar to call. When contract A executes delegatecall to contract B, B's code is executed with contract A's storage, msg.sender and msg.value. Consider three contracts A -> B -> C
+
+
+Contract A send's 100 Wei to Contract B and Contract B send's 100 Wei to contract C. This is simple because every contract will use its own storage. But if we talk about Delegate call B delegates the call to C we expect the msg.sender to be B but since we used delegate call so the msg.sender will be A and msg.value will be 100 Wei. Delegatecall's preserve the context. Same is the reason msg.sender will be A and msg.Value will be 100 Wei.
