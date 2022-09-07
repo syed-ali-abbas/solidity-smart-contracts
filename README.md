@@ -194,3 +194,29 @@ We can create new contract's from a contract called as ContractFactory or Accoun
 In the logic of this AccountFactory Contract we are simply creating new contracts and pushing their addresses in an array i.e. accounts.push(account); note that we are also sending some wei their amount is greater than equal to 111. After creating the contract we will fetch the address of contract located on 0th index of the array. 
 
 In remix "At Address", copy and paste the address you fetched from the array. Scroll down and you will see the newly deployed contract. Click on the owner you will see the address of AccountFactory owner and in the bank you will see the address of AccountFactory contract.
+
+To make the code more simple for Noobs I will recommend you to write the below code in your remix IDE:
+
+//SPDX-License-Identifier:UNLICENSED</br>
+pragma solidity ^0.8.7;
+
+contract Account{</br>
+ address public bank;</br>
+ address public owner;
+
+ constructor(address _owner) {</br>
+     bank=msg.sender;</br>
+     owner=_owner;</br>
+ }</br>
+}</br>
+
+contract AccountFactory{</br>
+    Account[] public accounts;
+
+    function createAccount(address owner) external {</br>
+        Account account = new Account(owner);</br>
+        accounts.push(account);</br>
+    }</br>
+}</br>
+
+In the above code simply create a template contract and a AccountFactory Contract. In AccountFactory Contract we will create an array and a function called as createAccount. Pass the address variable in createAccount We will create an object of Account Contract by calling the constructor and passing the owners address in it. At the end we will push the address of object created in an Array. 
