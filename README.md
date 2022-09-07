@@ -185,3 +185,12 @@ Delegatecall is a low level function similar to call. When contract A executes d
 
 
 Contract A send's 100 Wei to Contract B and Contract B send's 100 Wei to contract C. This is simple because every contract will use its own storage. But if we talk about Delegate call B delegates the call to C we expect the msg.sender to be B but since we used delegate call so the msg.sender will be A and msg.value will be 100 Wei. Delegatecall's preserve the context. Same is the reason msg.sender will be A and msg.Value will be 100 Wei.
+
+
+### Create Contract from Another Contract
+
+We can create new contract's from a contract called as ContractFactory or AccountFactory Contract. We name it as Factory because it create or produces new contract's. 
+
+In the logic of this AccountFactory Contract we are simply creating new contracts and pushing their addresses in an array i.e. accounts.push(account); note that we are also sending some wei their amount is greater than equal to 111. After creating the contract we will fetch the address of contract located on 0th index of the array. 
+
+In remix "At Address", copy and paste the address you fetched from the array. Scroll down and you will see the newly deployed contract. Click on the owner you will see the address of AccountFactory owner and in the bank you will see the address of AccountFactory contract.
